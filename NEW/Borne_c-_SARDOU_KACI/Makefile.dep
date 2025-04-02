@@ -1,0 +1,16 @@
+baseclient.o: src/baseclient.cpp include/baseclient.h
+bouton.o: src/bouton.cpp include/bouton.h
+generateur_save.o: src/generateur_save.cpp include/generateur_save.h \
+ include/voyant.h include/prise.h include/bouton.h include/lecteurcarte.h \
+ include/baseclient.h include/generateur_save.h
+lecteurcarte.o: src/lecteurcarte.cpp include/lecteurcarte.h \
+ include/baseclient.h include/voyant.h include/bouton.h include/prise.h \
+ include/generateur_save.h include/lecteurcarte.h include/baseclient.h \
+ include/voyant.h include/bouton.h include/generateur_save.h
+main.o: src/main.cpp include/lecteurcarte.h include/baseclient.h \
+ include/voyant.h include/bouton.h include/prise.h \
+ include/generateur_save.h include/lecteurcarte.h include/voyant.h \
+ include/bouton.h include/generateur_save.h include/prise.h \
+ include/baseclient.h
+prise.o: src/prise.cpp include/prise.h
+voyant.o: src/voyant.cpp include/voyant.h
